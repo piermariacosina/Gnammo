@@ -38,4 +38,71 @@ $(document).ready(function(){
 	      }
 	    }
 	
+		
+		$('#menu ul li a').click(function(event){
+			event.preventDefault();
+			var section = $(this).attr("href");
+			$(section).ScrollTo({
+		    duration: 400,
+		    easing: 'easeOutExpo'
+		});
+		});
+		
+		
+		$(".wrapper").isotope({
+		  // options
+		  itemSelector : '.item',
+		  layoutMode : 'fitRows'
+		});
+		
+		$("#enlarge_locations").click(function(event){
+			event.preventDefault();
+			$("#locations").animate(
+				
+				{height: "+=225px"},500
+			);
+			
+			var $items = $('<div class="item" /><div class="item" /><div class="item" /><div class="item" /><div class="item" />');
+			
+			$("#locations .wrapper").append( $items ).isotope( 'appended', $items);
+		});
+		
+		
+		$("#enlarge_events").click(function(event){
+			event.preventDefault();
+			$("#events").animate(
+				
+				{height: "+=225px"},500
+			);
+			
+			var $items = $('<div class="item" /><div class="item" /><div class="item" /><div class="item" /><div class="item" />');
+			
+			$("#events .wrapper").append( $items ).isotope( 'appended', $items);
+		});
+		
+		
+		$("#enlarge_blog").click(function(event){
+			event.preventDefault();
+			$("#blog").animate(
+				
+				{height: "+=225px"},500
+			);
+			
+			var $items = $('<div class="item" /><div class="item" /><div class="item" /><div class="item" /><div class="item" />');
+			
+			$("#blog .wrapper").append( $items ).isotope( 'appended', $items);
+		});
+		
+		
+		$("#enlarge_people").click(function(event){
+			event.preventDefault();
+			$("#people").animate(
+				
+				{height: "+=225px"},500
+			);
+			
+			var $items = $('<div class="item" /><div class="item" /><div class="item" /><div class="item" /><div class="item" />');
+			
+			$("#people .wrapper").append( $items ).isotope( 'appended', $items);
+		});
 });
