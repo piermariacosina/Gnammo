@@ -559,27 +559,72 @@ body.bp {
 }
 
 /* line 51, ../sass/screen.scss */
-.row_eventi {
-  width: 740px;
+.row_events {
   margin-top: 15px;
+  overflow: hidden;
+  *zoom: 1;
 }
 
-/* line 57, ../sass/screen.scss */
-.top_row_eventi {
-  width: 730px;
+/* line 56, ../sass/screen.scss */
+.event.single {
+  display: inline;
+  float: left;
+}
+/* line 59, ../sass/screen.scss */
+.event.single .date {
+  border-top: 1px solid #68d7e0;
+  width: 226px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  float: left;
+  background-image: -webkit-gradient(radial, 50% 0, 0, 50% 0, 60, color-stop(0%, rgba(121, 212, 216, 0.5)), color-stop(60%, rgba(121, 212, 216, 0)));
+  background-image: -webkit-radial-gradient(50% 0, rgba(121, 212, 216, 0.5), rgba(121, 212, 216, 0) 60%);
+  background-image: -moz-radial-gradient(50% 0, rgba(121, 212, 216, 0.5), rgba(121, 212, 216, 0) 60%);
+  background-image: -o-radial-gradient(50% 0, rgba(121, 212, 216, 0.5), rgba(121, 212, 216, 0) 60%);
+  background-image: -ms-radial-gradient(50% 0, rgba(121, 212, 216, 0.5), rgba(121, 212, 216, 0) 60%);
+  background-image: radial-gradient(50% 0, rgba(121, 212, 216, 0.5), rgba(121, 212, 216, 0) 60%);
+}
+/* line 67, ../sass/screen.scss */
+.event.single .date .day {
+  font-family: 'Bemio italic';
+  font-size: 55px;
+  color: #80dadd;
+  font-style: italic;
+  line-height: 64px;
+  float: left;
+  margin-right: 10px;
+}
+/* line 76, ../sass/screen.scss */
+.event.single .date .month {
+  font-family: 'Bemio italic';
+  font-style: italic;
+  font-size: 24px;
+  color: #80dadd;
+  text-transform: capitalize;
+}
+/* line 83, ../sass/screen.scss */
+.event.single .date .place {
+  font-family: 'Bemio italic';
+  font-style: italic;
+  font-size: 18px;
+  color: #fff3f6;
+  margin-top: -10px;
+}
+/* line 92, ../sass/screen.scss */
+.event.single .mask {
+  width: 246px;
   height: 298px;
   overflow: hidden;
-  padding-left: 10px;
   border-bottom: 1px solid #3886ad;
 }
-
-/* line 66, ../sass/screen.scss */
-.scheda_evento {
+/* line 99, ../sass/screen.scss */
+.event.single .mask .card {
   position: relative;
+  display: inline;
   float: left;
   width: 216px;
   height: 290px;
-  margin: 10px;
+  margin: 10px 10px 10px 14px;
   -webkit-border-radius: 6px 6px;
   -moz-border-radius: 6px / 6px;
   -ms-border-radius: 6px / 6px;
@@ -590,8 +635,8 @@ body.bp {
   box-shadow: 1px 2px 10px rgba(11, 78, 107, 0.5);
   border: 2px solid #fff3f6;
 }
-/* line 76, ../sass/screen.scss */
-.scheda_evento img {
+/* line 109, ../sass/screen.scss */
+.event.single .mask .card img {
   height: 290px;
   -webkit-border-radius: 3px 3px;
   -moz-border-radius: 3px / 3px;
@@ -599,9 +644,8 @@ body.bp {
   -o-border-radius: 3px / 3px;
   border-radius: 3px / 3px;
 }
-
-/* line 84, ../sass/screen.scss */
-.faccia_scheda_evento {
+/* line 114, ../sass/screen.scss */
+.event.single .mask .card .avatar {
   position: absolute;
   top: -7px;
   right: -7px;
@@ -617,8 +661,8 @@ body.bp {
   box-shadow: 1px 2px 10px rgba(11, 78, 107, 0.5);
   border: 2px solid #fff3f6;
 }
-/* line 94, ../sass/screen.scss */
-.faccia_scheda_evento img {
+/* line 124, ../sass/screen.scss */
+.event.single .mask .card .avatar img {
   width: 80px;
   height: 80px;
   -webkit-border-radius: 4px 4px;
@@ -628,60 +672,14 @@ body.bp {
   border-radius: 4px / 4px;
 }
 
-/* line 102, ../sass/screen.scss */
-.bottom_row_eventi {
-  width: 740px;
-  height: 70px;
-  background-image: -webkit-gradient(radial, 50% 0, 0, 50% 0, 60, color-stop(0%, rgba(121, 212, 216, 0.5)), color-stop(60%, rgba(121, 212, 216, 0)));
-  background-image: -webkit-radial-gradient(50% 0, rgba(121, 212, 216, 0.5), rgba(121, 212, 216, 0) 60%);
-  background-image: -moz-radial-gradient(50% 0, rgba(121, 212, 216, 0.5), rgba(121, 212, 216, 0) 60%);
-  background-image: -o-radial-gradient(50% 0, rgba(121, 212, 216, 0.5), rgba(121, 212, 216, 0) 60%);
-  background-image: -ms-radial-gradient(50% 0, rgba(121, 212, 216, 0.5), rgba(121, 212, 216, 0) 60%);
-  background-image: radial-gradient(50% 0, rgba(121, 212, 216, 0.5), rgba(121, 212, 216, 0) 60%);
-  border-top: 1px solid #68d7e0;
-}
-
-/* line 110, ../sass/screen.scss */
-.data_evento {
-  width: 220px;
-  margin-left: 20px;
-  margin-bottom: 30px;
-  float: left;
-}
-/* line 116, ../sass/screen.scss */
-.data_evento .giorno {
-  font-family: 'Bemio italic';
-  font-size: 55px;
-  color: #80dadd;
-  font-style: italic;
-  line-height: 64px;
-  float: left;
-  margin-right: 10px;
-}
-/* line 126, ../sass/screen.scss */
-.data_evento .mese {
-  font-family: 'Bemio italic';
-  font-style: italic;
-  font-size: 24px;
-  color: #80dadd;
-  text-transform: capitalize;
-}
-/* line 134, ../sass/screen.scss */
-.data_evento .luogo {
-  font-family: 'Bemio italic';
-  font-style: italic;
-  font-size: 18px;
-  color: #fff3f6;
-  margin-top: -10px;
-}
-
-/* line 147, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 .blog_side {
+  margin-top: 100px;
   width: 291px;
   background-color: #d7e2de;
   padding: 43px 0 18px 39px;
 }
-/* line 152, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 .blog_side h1 {
   width: 202px;
   font-family: 'Bemio italic';
@@ -690,7 +688,7 @@ body.bp {
   color: #33bbcc !important;
   line-height: 35px !important;
 }
-/* line 161, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .blog_side h2 {
   width: 202px;
   font-family: 'Bemio italic';
@@ -700,7 +698,7 @@ body.bp {
   margin-top: -15px;
   margin-bottom: 25px !important;
 }
-/* line 171, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .blog_side p {
   width: 202px;
   font-family: 'Droid Sans', sans-serif;
@@ -711,7 +709,7 @@ body.bp {
   text-indent: 10px;
   margin: 0 0 10px !important;
 }
-/* line 181, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 .blog_side .autore {
   font-family: 'Droid Serif', serif;
   font-weight: normal;
@@ -722,26 +720,26 @@ body.bp {
   color: #373a39;
   margin-top: 28px !important;
 }
-/* line 192, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .blog_side .name {
   font-size: 11px;
   font-weight: bold;
   color: #33bbcc;
 }
 
-/* line 202, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 .quote_side {
   width: 291px;
   background-color: #ff7d08;
   padding: 43px 0 18px 39px;
 }
-/* line 207, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 .quote_side .virgolette {
   float: left;
   margin-left: -25px;
   width: auto;
 }
-/* line 213, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 .quote_side p {
   width: 202px;
   font-family: 'Bemio italic';
@@ -750,11 +748,11 @@ body.bp {
   line-height: 29px;
   color: #e85605;
 }
-/* line 222, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 .quote_side .emphasize {
   color: #d13b07;
 }
-/* line 226, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 .quote_side .firma {
   font-family: 'Droid Serif', serif;
   font-weight: normal;
@@ -765,20 +763,20 @@ body.bp {
   color: #d13b07;
   margin-top: 28px !important;
 }
-/* line 237, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 .quote_side .name_quote {
   font-size: 11px;
   font-weight: bold;
   color: #fff3f6;
 }
 
-/* line 244, ../sass/screen.scss */
+/* line 234, ../sass/screen.scss */
 .top_evento_singolo {
   width: 700px;
   padding: 0 20px;
   margin-top: 26px;
 }
-/* line 250, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 .top_evento_singolo h1 {
   width: 400px;
   font-family: 'Bemio italic';
@@ -788,7 +786,7 @@ body.bp {
   color: #fff3f6 !important;
   margin: 0 0 17px !important;
 }
-/* line 260, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 .top_evento_singolo .intro {
   width: 400px;
   font-family: 'Bemio italic';
@@ -799,7 +797,7 @@ body.bp {
   margin: 0 !important;
   float: left;
 }
-/* line 271, ../sass/screen.scss */
+/* line 261, ../sass/screen.scss */
 .top_evento_singolo .prezzo {
   float: right;
   font-family: 'Bemio italic';
@@ -810,7 +808,7 @@ body.bp {
   bottom: 0;
 }
 
-/* line 284, ../sass/screen.scss */
+/* line 274, ../sass/screen.scss */
 .foto {
   width: 740px;
   height: 337px;
@@ -820,7 +818,7 @@ body.bp {
   margin-bottom: 30px;
   float: left;
 }
-/* line 295, ../sass/screen.scss */
+/* line 285, ../sass/screen.scss */
 .foto .gradient_sx {
   width: 20px;
   height: 335px;
@@ -834,7 +832,7 @@ body.bp {
   border-top: 1px solid #3886ad;
   float: left;
 }
-/* line 303, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 .foto .gradient_dx {
   width: 20px;
   height: 335px;
@@ -848,7 +846,7 @@ body.bp {
   border-top: 1px solid #3886ad;
   float: left;
 }
-/* line 311, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 .foto .img {
   width: 700px;
   height: 335px;
@@ -858,12 +856,12 @@ body.bp {
   overflow: hidden;
 }
 
-/* line 321, ../sass/screen.scss */
+/* line 311, ../sass/screen.scss */
 .description {
   width: 400px;
   padding-left: 20px;
 }
-/* line 324, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 .description p {
   font-family: 'Droid Sans', sans-serif;
   font-weight: normal;
@@ -873,7 +871,7 @@ body.bp {
   text-indent: 10px;
   margin: 0 0 10px !important;
 }
-/* line 333, ../sass/screen.scss */
+/* line 323, ../sass/screen.scss */
 .description .autore {
   font-family: 'Droid Serif', serif;
   font-weight: normal;
@@ -884,7 +882,7 @@ body.bp {
   color: #052C49;
   margin-top: 28px !important;
 }
-/* line 343, ../sass/screen.scss */
+/* line 333, ../sass/screen.scss */
 .description .name {
   font-size: 11px;
   font-weight: bold;
