@@ -2,6 +2,7 @@ $(document).ready(function(){
 	$(".second").pageslide({ direction: "left" });
 	$(".first").pageslide({ direction: "right" });
 	
+	var $events = $('<div class="event single cover "><div class="mask"><div class="card mosaic-overlay"><img src="images/placeholder.png" /><div class="avatar"><img src="images/face.png" /></div></div><div class="details mosaic-backdrop"><p>Chocolate cake pastry tootsie roll. Macaroon dragée jelly beans chupa chups jelly. Jujubes applicake chocolate cake sugar plum tiramisu dessert cotton candy. Bear claw muffin croissant lemon drops sweet roll brownie jelly.</p></div></div><div class="date"><div class="day">31</div><div class="month">dicembre</div><div class="place">Caltanissetta</div></div></div><div class="event single cover "><div class="mask"><div class="card mosaic-overlay"><img src="images/placeholder.png" /><div class="avatar"><img src="images/face.png" /></div></div><div class="details mosaic-backdrop"><p>Chocolate cake pastry tootsie roll. Macaroon dragée jelly beans chupa chups jelly. Jujubes applicake chocolate cake sugar plum tiramisu dessert cotton candy. Bear claw muffin croissant lemon drops sweet roll brownie jelly.</p></div></div><div class="date"><div class="day">31</div><div class="month">dicembre</div><div class="place">Caltanissetta</div></div></div><div class="event single cover "><div class="mask"><div class="card mosaic-overlay"><img src="images/placeholder.png" /><div class="avatar"><img src="images/face.png" /></div></div><div class="details mosaic-backdrop"><p>Chocolate cake pastry tootsie roll. Macaroon dragée jelly beans chupa chups jelly. Jujubes applicake chocolate cake sugar plum tiramisu dessert cotton candy. Bear claw muffin croissant lemon drops sweet roll brownie jelly.</p></div></div><div class="date"><div class="day">31</div><div class="month">dicembre</div><div class="place">Caltanissetta</div></div></div><div class="event single cover "><div class="mask"><div class="card mosaic-overlay"><img src="images/placeholder.png" /><div class="avatar"><img src="images/face.png" /></div></div><div class="details mosaic-backdrop"><p>Chocolate cake pastry tootsie roll. Macaroon dragée jelly beans chupa chups jelly. Jujubes applicake chocolate cake sugar plum tiramisu dessert cotton candy. Bear claw muffin croissant lemon drops sweet roll brownie jelly.</p></div></div><div class="date"><div class="day">31</div><div class="month">dicembre</div><div class="place">Caltanissetta</div></div></div><div class="event single cover "><div class="mask"><div class="card mosaic-overlay"><img src="images/placeholder.png" /><div class="avatar"><img src="images/face.png" /></div></div><div class="details mosaic-backdrop"><p>Chocolate cake pastry tootsie roll. Macaroon dragée jelly beans chupa chups jelly. Jujubes applicake chocolate cake sugar plum tiramisu dessert cotton candy. Bear claw muffin croissant lemon drops sweet roll brownie jelly.</p></div></div><div class="date"><div class="day">31</div><div class="month">dicembre</div><div class="place">Caltanissetta</div></div></div>');
 
 		
 	$("#open_footer").toggle(
@@ -49,60 +50,121 @@ $(document).ready(function(){
 		});
 		
 		
+		function refresh_scrollspy(){
+			
+			$('[data-spy="scroll"]').each(function () {
+				console.log("refresh");
+			  var $spy = $(this).scrollspy('refresh')
+			});
+		}
+		
 		$(".wrapper").isotope({
 		  // options
-		  itemSelector : '.item',
+		  eventselector : '.event',
 		  layoutMode : 'fitRows'
 		});
 		
 		$("#enlarge_locations").click(function(event){
 			event.preventDefault();
-			$("#locations").animate(
+			$("#locations .spacer").animate(
 				
-				{height: "+=225px"},500
+				{height: "+=400px"},500, refresh_scrollspy()
 			);
 			
-			var $items = $('<div class="item" /><div class="item" /><div class="item" /><div class="item" /><div class="item" />');
+			$("#locations .content").animate(
+				
+				{height: "+=400px"},500
+			);
 			
-			$("#locations .wrapper").append( $items ).isotope( 'appended', $items);
+			$("#locations .wrapper").append( $events ).isotope( 'appended', $events);
+			
+			$('#locations .cover').mosaic({
+				animation	:	'slide',	//fade or slide
+				anchor_y	:	'top',		//Vertical anchor position
+				hover_y		:	'270px'		//Vertical position on hover
+			});
+			
+			
 		});
 		
 		
 		$("#enlarge_events").click(function(event){
 			event.preventDefault();
-			$("#events").animate(
+			$("#events .spacer").animate(
 				
-				{height: "+=225px"},500
+				{height: "+=400px"},500, refresh_scrollspy()
 			);
 			
-			var $items = $('<div class="item" /><div class="item" /><div class="item" /><div class="item" /><div class="item" />');
+			$("#events .content").animate(
+				
+				{height: "+=400px"},500
+			);
 			
-			$("#events .wrapper").append( $items ).isotope( 'appended', $items);
+			
+			
+			$("#events .wrapper").append( $events ).isotope( 'appended', $events);
+			
+			$('#events .cover').mosaic({
+				animation	:	'slide',	//fade or slide
+				anchor_y	:	'top',		//Vertical anchor position
+				hover_y		:	'270px'		//Vertical position on hover
+			});
+			
 		});
 		
 		
 		$("#enlarge_blog").click(function(event){
 			event.preventDefault();
-			$("#blog").animate(
+			$("#blog .spacer").animate(
 				
-				{height: "+=225px"},500
+				{height: "+=400px"},500, refresh_scrollspy()
 			);
 			
-			var $items = $('<div class="item" /><div class="item" /><div class="item" /><div class="item" /><div class="item" />');
+			$("#blog .content").animate(
+				
+				{height: "+=400px"},500
+			);
 			
-			$("#blog .wrapper").append( $items ).isotope( 'appended', $items);
+			
+			
+			$("#blog .wrapper").append( $events ).isotope( 'appended', $events);
+			
+			$('#blog .cover').mosaic({
+				animation	:	'slide',	//fade or slide
+				anchor_y	:	'top',		//Vertical anchor position
+				hover_y		:	'270px'		//Vertical position on hover
+			});
+			
 		});
 		
 		
 		$("#enlarge_people").click(function(event){
 			event.preventDefault();
-			$("#people").animate(
+			$("#people .spacer").animate(
 				
-				{height: "+=225px"},500
+				{height: "+=400px"},500, refresh_scrollspy()
 			);
 			
-			var $items = $('<div class="item" /><div class="item" /><div class="item" /><div class="item" /><div class="item" />');
+			$("#people .content").animate(
+				
+				{height: "+=400px"},500
+			);
 			
-			$("#people .wrapper").append( $items ).isotope( 'appended', $items);
+
+			
+			$("#people .wrapper").append( $events ).isotope( 'appended', $events);
+			
+			$('#people .cover').mosaic({
+				animation	:	'slide',	//fade or slide
+				anchor_y	:	'top',		//Vertical anchor position
+				hover_y		:	'270px'		//Vertical position on hover
+			});
+			
+		});
+		
+		$('.cover').mosaic({
+			animation	:	'slide',	//fade or slide
+			anchor_y	:	'top',		//Vertical anchor position
+			hover_y		:	'270px'		//Vertical position on hover
 		});
 });
