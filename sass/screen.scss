@@ -20,6 +20,7 @@
 @import "compass/utilities/general/float";
 @import "compass/css3/box-shadow";
 @import "compass/css3/font-face";
+@import "compass/css3/columns";
 
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:700italic,400italic);
@@ -143,7 +144,7 @@ h1.title{
 #wrapper{
 	position: absolute;
 	width: 100%;
-	background-color: red;
+	background-color: #d7e2de;
 }
 
 #main{
@@ -496,3 +497,550 @@ border-width: 0 0 1px;
 .sidebar-green{
 	background-color: $sidebar-green;
 }
+
+
+//Style blog_singolo post//
+
+
+
+.basicbox{
+	position: relative;
+	padding-left: 40px;
+	@include clearfix;
+}
+
+//.foto_1{
+//position: relative;
+//top: 50px;
+//margin-left: 20px;
+//width: 262px;
+//@include float-left;
+//margin-bottom: 20px;
+//}
+
+
+.foto_1{
+
+    width:  740px;
+    height: 337px;
+    border-bottom: 1px solid $blu_light_border;
+    border-top: 1px solid $blu_light_border;
+    margin-top: 26px;
+    margin-bottom: 30px;
+    float: left;
+
+    
+    .gradient_sx{
+        width: 20px;
+        height: 335px;
+        @include background-image(linear-gradient(left, rgba(55,144,204,0), rgba(55,144,204,0.4) 100%));
+        border-bottom: 1px solid $blu_dark_border;
+        border-top: 1px solid $blu_dark_border;
+        float: left;
+    }
+    .gradient_dx{
+        width: 20px;
+        height: 335px;
+        @include background-image(linear-gradient(left, rgba(55,144,204,0.4), rgba(55,144,204,0) 100%));
+        border-bottom: 1px solid $blu_dark_border;
+        border-top: 1px solid $blu_dark_border;
+        float: left;
+    }
+    .img{
+        width: 700px;
+        height: 335px;
+        border-bottom: 1px solid $blu_dark_border;
+        border-top: 1px solid $blu_dark_border;
+        float: left;
+        overflow: hidden;
+    }
+}
+
+
+
+
+.bubble{
+ width: 73px;
+ height: 86px;
+ position: absolute;
+ z-index: 2;
+ margin-top: 30px;
+}
+
+.bubble h1{
+ position: relative;
+ bottom: 70px;
+ left: 10px;
+ font-family: "Bemio italic";
+ font-style: italic;
+ font-size: 2em;
+ color: #FFF3F6;
+
+}
+
+.bubble h2{
+ position: relative;
+ bottom: 85px;
+ left: 18px;
+ font-family: "Bemio italic";
+ font-style: italic;
+ font-size: 0.8em;
+ color: #FFF3F6;
+ line-height: 8px;
+ text-transform: uppercase;
+
+}
+
+.text{
+position: relative;
+margin-top: 50px;
+@include float-left;
+margin-left: 20px;
+}
+
+.text h1{
+  font-family: "Bemio italic";
+  font-style: italic;
+  font-size: 3.5em;
+  color: #FFF3F6;
+}
+
+.text h2{
+  font-family: "Bemio italic";
+  font-style: italic;
+  font-size: 1.5em;
+  color: #5E6866;
+  margin-top: -20px;
+  
+}
+
+.text p{
+  font-family: "Droid Sans";
+  font-size: 1em;
+  color: #575958;
+  margin-top: -10px;
+  width: 400px;
+  position: relative;
+  line-height: 15px;
+  text-indent: 10px
+  
+}
+
+
+
+.foto_intermezzo{
+
+position: relative;
+padding-left: 60px;
+margin-top: 40px;
+overflow: hidden;
+width: 682 px;
+height: 229 px;
+}
+
+.foto_2{
+  position: relative;
+  top: 50px;
+  margin-left: 20px;
+  width: 262px;
+  height: 272px;
+  @include float-left;
+  @include single-box-shadow;
+  margin-bottom: 30px;
+  
+ }
+ 
+ .text_2{
+ position: relative;
+ margin-top: 50px;
+ @include float-left;
+ margin-left: 20px;
+ 
+ 
+}
+
+.text_2 h1{
+  font-family: "Bemio italic";
+  font-style: italic;
+  font-size: 3.5em;
+  color: #FFF3F6;
+}
+
+.text_2 h2{
+  font-family: "Bemio italic";
+  font-style: italic;
+  font-size: 1.5em;
+  color: #5E6866;
+  margin-top: -20px;
+  
+}
+
+.text_2 p{
+  font-family: "Droid Sans";
+  font-size: 1em;
+  color: #575958;
+  width: 400px;
+  position: relative;
+  margin-top: -10px;
+  line-height: 15px;
+  text-indent: 10px
+ }
+ 
+ .text_2 h3{
+  font-family: "Droid Serif";
+  font-style: italic;
+  width: 400px;
+  font-size: 1em;
+  position: relative;
+  top: 12px;
+  }
+ 
+ .text_2 span{
+  color: #FFFFFF;
+  font-family: "Droid Serif";
+  font-style: bold italic;
+  font-size: 1.1em;
+ }
+ 
+ 
+ 
+ //Style blog_lista_post//
+ 
+ .foto_post_1{
+ position: relative;
+ top: 50px;
+ margin-left: 20px;
+ width: 262px;
+ height: 448 px;
+ margin-bottom: 20px;
+ @include float-left;
+ @include single-box-shadow;
+ }
+ 
+ .bubble_post_1{
+  width: 73px;
+  height: 86px;
+  position: absolute;
+  z-index: 2;
+  margin-top: 30px;
+ }
+ 
+ .bubble_post_1 h1{
+  position: relative;
+  bottom: 70px;
+  left: 10px;
+  font-family: "Bemio italic";
+  font-style: italic;
+  font-size: 2em;
+  color: #FFF3F6;
+ 
+ }
+ 
+ .bubble_post_1 h2{
+  position: relative;
+  bottom: 85px;
+  left: 18px;
+  font-family: "Bemio italic";
+  font-style: italic;
+  font-size: 0.8em;
+  color: #FFF3F6;
+  line-height: 8px;
+  text-transform: uppercase;
+ 
+ }
+ 
+ .text_post{
+ position: relative;
+ margin-top: 50px;
+ @include float-left;
+ margin-left: 20px;
+ }
+ 
+ .text_post h1{
+   font-family: "Bemio italic";
+   font-style: italic;
+   font-size: 3.5em;
+   color: #FFF3F6;
+ }
+ 
+ .text_post h2{
+   font-family: "Bemio italic";
+   font-style: italic;
+   font-size: 1.5em;
+   color: #5E6866;
+   margin-top: -20px;
+   
+ }
+ 
+ .text_post p{
+   font-family: "Droid Sans";
+   font-size: 1em;
+   color: #575958;
+   margin-top: -10px;
+   width: 400px;
+   position: relative;
+   line-height: 15px;
+   text-indent: 10px
+   
+ }
+ 
+ .text_post h3{
+   font-family: "Droid Serif";
+   font-style: italic;
+   width: 400px;
+   font-size: 1em;
+   position: relative;
+ }
+ 
+ .text_post h3 span{
+   color: #FFFFFF;
+   font-family: "Droid Serif";
+   font-style: bold italic;
+   font-size: 1.1em; 
+   }
+ 
+
+//Style categoria//
+
+#categoria{
+
+   margin-top: 150px;
+   padding-left: 40px;
+   @include column-count(3);
+   width: 699px;
+}
+
+.titolo{
+	padding-left: 40px;
+	margin-top: 50px;
+	font-family: "Bemio Italic";
+	font-style: italic;
+	font-size: 35 px;
+	position: absolute;
+	
+	h1{
+	color: #FFF3F6 !important; 
+	}
+	
+}
+
+.cat h1{
+  font-family: "Bemio Italic";
+  font-style: italic;
+  font-size: 35 px;
+  color: #5E6866;
+  
+}
+
+.cat h2{
+  font-family: "Bemio Italic";
+  font-style: italic;
+  color: #FFF3F6;
+  font-size: 20px;
+  position: relative;
+  bottom: 20px;
+ }
+
+.cat h3{
+  font-family: "Droid Serif";
+  font-style: italic;
+  color: #373A39;
+  font-size: 10px;
+  position: relative;
+}
+
+.cat h3 span{
+   font-family: "Droid Serif";
+   font-style: bold italic;
+   font-size: 12px;
+   color: #FFFFFF;
+   }
+
+.cat p{
+  	font-family: "Droid Sans";
+  	color: #575958;
+  	position: relative;
+  	bottom: 10px;
+
+}
+
+
+//Style intermezzo//
+
+
+#intermezzo{
+ 	background-color: #8ac24b;
+ 	height: 224px;
+ 	width: 873 px;
+ 	position: relative;
+	margin-top: 50px;
+ 
+}
+
+.event{
+	position: relative;
+	margin-left: 60px;
+	padding-top: 30px;
+}
+
+
+.event h1{
+	font-family: "Bemio Italic";
+	font-style: italic;
+	color: #FFF3F6;
+	font-size: 20px;
+
+}
+
+.event p{
+	font-family: "Droid Sans";
+	color: #575958;
+	font-size: 1.5 em;
+	width: 300px;
+}
+
+.event p span{
+	font-family: "Droid Sans";
+	font-style: bold;
+	color: #FFF3F6;
+	font-size: 1.5 em;
+	width: 300px;
+	}
+
+
+.event h1 span{
+	font-family: "Bemio Italic";
+	font-style: italic;
+	color: #FFF3F6;
+	font-size: 30px;
+}
+
+
+.bubble_2{
+	float: right;
+	position: absolute;
+	width: 219px;
+	height: 260px;
+	padding-left: 380px;
+	margin-top: -20px;
+}
+
+
+.bubble_2 h1{
+	position: relative;
+	bottom: 210px;
+	left: 45px;
+	font-family: "Bemio italic";
+	font-style: italic;
+	font-size: 5em;
+	color: #FFF3F6;
+}
+
+
+//Style profilo//
+
+	#profilo{
+	background-color: #ff7a2b;
+	height: 560px;
+}
+
+
+.text_profilo{
+	position: relative;
+	@include float-left;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.text_profilo h1{
+	font-family: "Bemio Italic";
+	font-style: italic;
+	color: #FFF3F6;
+	font-size: 2 em;
+	
+}
+
+.text_profilo h2{
+	font-family: "Droid Sans";
+	font-style: bold italic;
+	color: #892C0B;
+	font-size: 1.5 em;
+	
+}
+
+.text_profilo h3{
+	font-family: "Droid Sans", 700;
+	
+	color: #E85605;
+	font-size: 1 em;
+	
+	
+}
+
+.text_profilo h4{
+	font-family: "Droid Sans";
+	font-style: bold italic;
+	color: #E85605;
+	font-size: 0.7 em;
+	text-indent: 40px;
+	
+}
+
+.text_profilo h5{
+	font-family: "Droid Sans";
+	font-style: bold italic;
+	color: #892C0B;
+	font-size: 0.7 em;
+	
+}
+
+.text_profilo h5 span{
+	font-family: "Droid Sans";
+	font-style: bold italic;
+	color: #FFF3F6;
+	font-size: 0.7 em;
+	
+}
+
+.foto_profilo{
+	position: relative;width: 254x;
+	height: 254px;
+	@include float-left;
+    
+}
+
+
+.icona_1{
+margin-top: -230px;
+
+}
+
+.icona_stella{
+position: absolute;
+padding-top: 30px;
+}
+
+
+.profilo_utente{
+margin-top: 280px;
+
+}
+
+.profilo_utente h1{
+font-family: "Bemio Italic";
+color: #892C0B;
+font-style: italic;
+font-size: 1.8em;
+}
+
+.profilo_utente p{
+font-family: "Droid Sans";
+font-style: bold italic;
+color: #892C0B;
+font-size: 1em;
+width: 400px;
+}
+
+
+
+
